@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert to Uppercase</title>
+    <style>
+        body {
+           margin: 0;
+           padding: 0;
+           background: url("{{url_for('static', filename='work1.png')}}") no-repeat center center fixed;
+           background-size: cover;
+           overflow: hidden;
+        }
+
+        .header {
+            padding: 5px;
+            text-align: center;
+            background: #333333a1;
+            color: white;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            cursor: pointer;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+       h1{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, cursive;
+            font-size: 4vw;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            word-spacing: -1.2px;
+            position: absolute;
+            left: 10%;
+            top: 5%;
+            color: #ffe780;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5); 
+        }
+
+        .position{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3vw;
+            font-weight: 800;
+            position: absolute;
+            width: 1000px;
+            top: 35%;
+            left: 20%;
+            color: rgb(135, 222, 216);
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5);                
+        }
+
+        .body input[type=text] {
+            display: block;
+            font-size: 2vw;
+            position: absolute;
+            top: 36%;
+            left: 45%;
+            cursor: pointer;
+
+
+        }
+        
+        .body input[type=submit] {
+            font-size: 1.5vw;
+            width: 10%;
+            display: block;
+            font-weight: bold;
+            position: absolute;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #FFFBED;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5);                
+            background-color: #ddb55d;
+            border-radius: 11px;
+            top: 44%;
+            left: 60%;
+        }
+
+        .result{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.8vw;
+            width: 50%;
+            height: auto;
+            display: block;
+            font-weight: bold;
+            position: absolute;
+            margin: 20px auto;
+            padding: 5px 25px;
+            text-align: left;
+            color: #FFFBED;
+            background-color: #5db0dd7c;
+            border: 1px solid #1E1E1E;
+            border-radius: 15px;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5);
+            top: 55%;
+            left: 18%; 
+        }
+
+        .sidetotoro {
+            position: absolute;
+            bottom: 0%;
+            right: 3%;
+        }
+
+        .navigation-section {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #3498db;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navigation-section a {
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+   </style>
+</head>
+<body>
+    
+    <div class="header">
+        <a href="/">Home</a> | 
+        <a href="/profile">Profile</a> | 
+        <a href="/contact">Contact</a> |
+        <a href="/works">Works</a> 
+    </div>
+
+    <h1>Convert String to Uppercase</h1>
+    <img src="static/sidetotoro.png" alt="Walking Tototro" class="sidetotoro">
+
+    <form action="/touppercase" method="post" >
+        <label for="inputString" class="position">Enter a string:</label>
+        <div class="body input">
+            <input type="text" id="inputString" name="inputString">
+            <input type="submit" value="Convert" >
+        </div>
+    </form>
+    
+    <div class="result">
+    {% if result %}
+    <p> <span style="color: rgb(221, 208, 93);">Converted string:</span> {{ result }} </p>
+    {% endif %}
+    </div>
+
+    <div class="navigation-section">
+        <a href="/touppercase">Uppercase</a> | 
+        <a href="/circle">Circle</a> | 
+        <a href="/triangle">Triangle</a>
+    </div>
+
+</body>
+</html>

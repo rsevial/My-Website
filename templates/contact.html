@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("{{url_for('static', filename='contactbg.png')}}") no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 5px;
+            text-align: center;
+            background: #333;
+            color: white;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            cursor: pointer;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contact-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 110%;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 3vw;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 4px 5px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .fa:hover {
+            opacity: 0.9;
+        }
+
+        .fa-facebook {
+            background: #3b5898ae;
+        }
+
+        .fa-google {
+            background: #dd4c39d2;
+        }
+
+        .fa-github {
+            background: #333333ab;
+        }
+
+        .fa-phone {
+            background: #1fa41f;
+        }
+
+        .icon-text {
+            color: white;
+            margin-left: 5px;
+            font-size: 2vw;
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/">Home</a> |
+        <a href="/profile">Profile</a> |
+        <a href="/contact">Contact</a> |
+        <a href="/works">Works</a>
+    </div>
+
+    <div class="contact-icons">
+        <div class="icon-container">
+            <a href="https://www.facebook.com/rebekahjoy.sevial" class="fa fa-facebook"></a>
+            <p class="icon-text">Rebekah Sevial</p>
+        </div>
+
+        <div class="icon-container">
+            <a href="https://mail.google.com/" class="fa fa-google"></a>
+            <p class="icon-text">rebekahsevial@gmail.com</p>
+        </div>
+
+        <div class="icon-container">
+            <a href="https://github.com/rsevial" class="fa fa-github"></a>
+            <p class="icon-text">@rsevial</p>
+        </div>
+
+        <div class="icon-container">
+            <a href="tel:+639494949349" class="fa fa-phone"></a>
+            <p class="icon-text">+639494949349</p>
+        </div>
+    </div>
+</body>
+
+</html>

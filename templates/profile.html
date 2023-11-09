@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" id = "wrap">
+
+<head>
+    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            background: url("{{url_for('static', filename='profilebg.png')}}") no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }  
+
+        .header {
+            padding: 5px;
+            text-align: center;
+            background: #bcb11a71;
+            color: white;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            cursor: pointer;;
+            top: 0;
+            z-index: 1000;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.881) 1px 1px 1px rgba(0,0,0,.5); 
+
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .girl {
+            position: absolute;
+            height: auto;
+            width: auto;
+            bottom: 0%;
+            right: 0%;
+            z-index: 3;
+        }
+
+        .me {
+            position: absolute;
+            height:auto;
+            width: auto;
+            top: 10%;
+            left: 5%;
+            z-index: 2;
+            border-radius: 20px;
+        }
+
+        #wrap {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        .quote {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, cursive;
+            font-size: 3vw;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            word-spacing: -1.2px;
+            position: absolute;
+            right: 2%;
+            top: 10%;
+            color: #ffe780;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5); 
+        }
+
+        .realquote {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, cursive;
+            font-size: 1.5vw;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            word-spacing: -1.2px;
+            position: absolute;
+            right: 23%;
+            top: 40%;
+            color: #ffe780;
+            text-align: center;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5); 
+        }
+
+        .introduction{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, cursive;
+            font-size: 2vw;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            word-spacing: -1.2px;
+            position: absolute;
+            left: 5%;
+            bottom: 7%;
+            color: #e9d365;
+            text-align: left;
+            width: 70%;
+            height: auto;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5); 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/">Home</a> | 
+        <a href="/profile">Profile</a> | 
+        <a href="/contact">Contact</a> |
+        <a href="/works">Works</a> 
+    </div>
+    
+    <img src="static/girl.png" alt="Girl" class="girl">
+    <img src="static/me.png" alt="My picture" class="me">
+
+    <div class="quote">
+        <p>"You are exactly <br> where you need to be"</p>
+    </div>
+    <div class="realquote"> "Lumaban ka! <br> Wala kang choice!" </div>
+    <div class="introduction">
+        <p>
+            Hello! My name is Rebekah Joy E. Sevial, 
+            and I'm 19 years old from Marikina City. 
+            I'm in my second year in college, section four, 
+            and I'm studying Computer Engineering at the 
+            Polytechnic University of the Philippines - Main Campus. 
+         </p>
+    </div>
+    <br>
+
+</body>
+
+</html>

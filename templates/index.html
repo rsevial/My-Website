@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+    <title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #wrap {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("{{url_for('static', filename='mainbg.png')}}") no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2vw;
+            letter-spacing: -0.2px;
+            word-spacing: -0.6px;
+            color: #000000;
+            text-transform: uppercase;
+            position: absolute;
+            left: 24.5%;
+            top: 39%;
+            transform: rotate(-2deg);
+        }
+
+        h4{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1vw;
+            letter-spacing: -0.2px;
+            word-spacing: -0.6px;
+            color: #000000;
+            text-transform: none;
+            position: absolute;
+            left: 29%;
+            top: 44%;
+            transform: rotate(-2deg);
+        }
+
+        .menu-label{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3vw;
+            letter-spacing: 1.2px;
+            word-spacing: -1.2px;
+            color: #ffffff;
+            text-shadow: 0 0 3px #000000;
+            text-transform: uppercase;
+            position: absolute;
+            z-index: 3;
+        }
+
+        .profile_position{
+            top: 48% ;
+            left: 30%;
+            transform: rotate(-1deg);
+            cursor: pointer;
+        }
+
+        .contact_position{
+            top: 60%;
+            left: 31%;
+            transform: rotate(-5deg);
+            cursor: pointer;
+
+        }
+
+        .work_position{
+            top: 74%;
+            left: 33%;
+            transform: rotate(10deg);
+            cursor: pointer;
+
+        }
+        
+        .blinking{
+            animation:blinkingText 1.2s infinite;
+        }
+
+    </style>
+</head>
+
+<body >
+    
+    <div id = "wrap">
+    <h1><span class="blinking">pick your destination!</span></h1>
+    <h4>To know more about Totoro's friend <3</h4>
+    </div id = "wrap">
+
+    <a href="/profile">
+        <h2 class="menu-label profile_position">Profile</h2>
+    </a>
+
+    <a href="/contact">
+        <h2 class="menu-label contact_position">Contact</h2>
+    </a>
+
+    <a href="/works">
+        <h2 class="menu-label work_position">Works</h2>
+    </a>
+
+</body>
+
+</html>

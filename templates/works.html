@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Works</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            background: url("{{url_for('static', filename='workbgg.png')}}") no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        } 
+
+        .header {
+            padding: 5px;
+            text-align: center;
+            background: #333;
+            color: white;
+            font-size: 16px;
+            position: fixed;
+            width: 100%;
+            cursor: pointer;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        h1{
+            font-family: Georgia, serif;
+            font-size: 4vw;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 2%;
+            left: 18.8%;
+            word-spacing: -1.4px;
+            color: #ffe780;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .label{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2vw;
+            letter-spacing: 1.2px;
+            word-spacing: -1.2px;
+            text-align: center;
+            font-weight: 700;
+            font-style: normal;
+            position: absolute;
+            z-index: 3;
+            color: #e9d365;
+            cursor: pointer;
+            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.881) 1px 1px 1px rgba(0,0,0,.5); 
+        }
+
+        .uppercase_position {
+            top: 95%;
+            left: 1%;
+        }
+
+        .circle_position {
+            top: 95%;
+            left: 1%;
+        }
+
+        .triangle_position {
+            top: 95%;
+            left: 1%;
+        }
+
+        .item {
+            position: absolute;
+            z-index: 2;
+            background-color: rgba(234, 234, 234, 0.393);
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .touppercase {
+            bottom: 23%;
+            left: 15%;
+        }
+
+        .circle {
+            bottom: 23%;
+            left: 40%;
+        }
+
+        .triangle {
+            bottom: 23%;
+            left: 65%;
+        }
+
+        #wrap {
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="/">Home</a> | 
+        <a href="/profile">Profile</a> | 
+        <a href="/contact">Contact</a> |
+        <a href="/works">Works</a> 
+    </div>
+
+    <h1>My programming works</h1>
+
+    <div id="wrap">
+    <a href="/touppercase" class="item touppercase">
+        <img src="static/workbg1.png" alt="Uppercase">
+        <h2 class="label uppercase_position">Convert String to Uppercase</h2>
+    </a>
+    </div>
+
+    </div id="wrap">
+    <a href="/circle" class="item circle">
+        <img src="static/workbg2.png" alt="Circle">
+        <h2 class="label circle_position"> Get the Area of a Circle</h2>
+    </a>
+    </div>
+
+    </div id="wrap">
+    <a href="/triangle" class="item triangle">
+        <img src="static/workbg3.png" alt="Triangle">
+        <h2 class="label triangle_position"> Get the Area of a Triangle</h2>
+    </a>
+    </div>
+
+
+</body>
+</html>
