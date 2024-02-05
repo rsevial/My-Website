@@ -5,128 +5,170 @@
     <title>Profile</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-         body {
-            margin: 0;
-            padding: 0;
-            background: url("{{url_for('static', filename='profilebg.png')}}") no-repeat center center fixed;
-            background-size: cover;
-            overflow: hidden;
-        }  
-
-        .header {
-            padding: 5px;
-            text-align: center;
-            background: #bcb11a71;
-            color: white;
-            font-size: 16px;
-            position: fixed;
-            width: 100%;
-            cursor: pointer;;
-            top: 0;
-            z-index: 1000;
-            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.881) 1px 1px 1px rgba(0,0,0,.5); 
-
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .girl {
-            position: absolute;
-            height: auto;
-            width: auto;
-            bottom: 0%;
-            right: 0%;
-            z-index: 3;
-        }
-
-        .me {
-            position: absolute;
-            height:auto;
-            width: auto;
-            top: 10%;
-            left: 5%;
-            z-index: 2;
-            border-radius: 20px;
-        }
-
-        .quote {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, cursive;
-            font-size: 3vw;
-            font-weight: 800;
-            letter-spacing: 1.2px;
-            word-spacing: -1.2px;
-            position: absolute;
-            right: 2%;
-            top: 10%;
-            color: #ffe780;
-            text-transform: uppercase;
-            text-align: center;
-            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5); 
-        }
-
-        .realquote {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, cursive;
-            font-size: 1.5vw;
-            font-weight: 800;
-            letter-spacing: 1.2px;
-            word-spacing: -1.2px;
-            position: absolute;
-            right: 23%;
-            top: 40%;
-            color: #ffe780;
-            text-align: center;
-            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5); 
-        }
-
-        .introduction{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, cursive;
-            font-size: 2vw;
-            font-weight: 800;
-            letter-spacing: 1.2px;
-            word-spacing: -1.2px;
-            position: absolute;
-            left: 5%;
-            bottom: 7%;
-            color: #e9d365;
-            text-align: left;
-            width: 70%;
-            height: auto;
-            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0,0,0,.5); 
-        }
-
-    </style>
+    <link href='https://fonts.googleapis.com/css?family=Youngest Serif' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
 </head>
+
+<style>
+    body {
+        background: url("{{url_for('static', filename='profilebg.png')}}") no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .nav {
+        background: #ffffff71;
+        position: fixed;
+        width: 100%;
+        text-align: right;
+        top: 10px;
+    }
+
+    .nav a {
+        color: #808080;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+        margin: 15px;
+        margin-left: 40px;
+        display: inline-block;
+        position: relative;
+        transition: color 0.4s;
+    }
+
+    .nav a:hover {
+        color: #000000;
+    }
+
+    .button-container {
+        position: fixed;
+        bottom: 8%;
+        right: 10%;
+    }
+
+    .button {
+        display: inline-block;
+        border-radius: 50px;
+        background-color: #F082AC;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 26px;
+        padding: 15px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        position: relative; 
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        transition: 0.5s;
+    }
+
+    .button:hover {
+        background-color: #d25180;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    .content-container {
+        text-align: left;
+        margin-top: 80px;
+        margin-left: 700px;
+    }
+
+    h1 {
+        font-family: 'Youngest Serif';
+        text-align: center; 
+        font-size: 60px;
+        color: white;
+        text-shadow: 0 0 10px rgba(141, 139, 139, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+
+    h1 span {
+        font-family: 'Great Vibes';
+        font-size: 80px;
+        color: white;
+    }
+
+    p {
+        font-family: 'Lora', serif;
+        font-size: 25px;
+        color: white;
+        text-shadow: 0 0 10px rgba(141, 139, 139, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
+        position: relative;
+        margin-top: 5px;
+    }
+
+    p::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 1px;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        margin-top: 5px; 
+    }
+
+    p span {
+        font-family: 'Merriweather', serif;
+        font-size: 30px;
+        color: white;
+        display: block;
+    }
+
+</style>
+
 <body>
-    <div class="header">
-        <a href="/">Home</a> | 
-        <a href="/profile">Profile</a> | 
-        <a href="/contact">Contact</a> |
-        <a href="/works">Works</a> 
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/works">Works</a>
+        <a href="/contact">Contact</a>
     </div>
     
-    <img src="static/girl.png" alt="Girl" class="girl">
-    <img src="static/me.png" alt="My picture" class="me">
-
-    <div class="quote">
-        <p>"You are exactly <br> where you need to be"</p>
+    <div class="content-container">
+        <h1 style="margin-right: 240px;"><span>A</span>bout <span>R</span>ebekah...</h1>
+        <div style="margin-top: -40px;">
+            <p>Full Name 
+                <span>Rebekah Joy E. Sevial</span></p>
+            <p> Course 
+                <span>Bachelor of Science in Computer Engineering </span>
+            </p>
+            <p>Section 
+                <span>BSCPE 2-4</span>
+            </p>
+            <p>Subject
+                <span>Data Structures and Algorithms</span>
+            </p>
+            <p>School
+                <span>Polytechnic University of the Philippines</span>
+            </p>
+        </div>
     </div>
-    <div class="realquote"> "Lumaban ka! <br> Wala kang choice!" </div>
-    <div class="introduction">
-        <p>
-            Hello! My name is Rebekah Joy E. Sevial, 
-            and I'm 19 years old from Marikina City. 
-            I'm in my second year in college, section four, 
-            and I'm studying Computer Engineering at the 
-            Polytechnic University of the Philippines - Main Campus. 
-         </p>
-    </div>
-    <br>
 
 </body>
-
 </html>

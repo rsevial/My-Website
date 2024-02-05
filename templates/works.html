@@ -5,135 +5,152 @@
     <title>Works</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-         body {
-            margin: 0;
-            padding: 0;
-            background: url("{{url_for('static', filename='workbgg.png')}}") no-repeat center center fixed;
-            background-size: cover;
-            overflow: hidden;
-        } 
-
-        .header {
-            padding: 5px;
-            text-align: center;
-            background: #333;
-            color: white;
-            font-size: 16px;
-            position: fixed;
-            width: 100%;
-            cursor: pointer;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        h1{
-            font-family: Georgia, serif;
-            font-size: 4vw;
-            letter-spacing: 1px;
-            position: absolute;
-            top: 2%;
-            left: 18.8%;
-            word-spacing: -1.4px;
-            color: #ffe780;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .label{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 2vw;
-            letter-spacing: 1.2px;
-            word-spacing: -1.2px;
-            text-align: center;
-            font-weight: 700;
-            font-style: normal;
-            position: absolute;
-            z-index: 3;
-            color: #e9d365;
-            cursor: pointer;
-            text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.881) 1px 1px 1px rgba(0,0,0,.5); 
-        }
-
-        .uppercase_position {
-            top: 95%;
-            left: 1%;
-        }
-
-        .circle_position {
-            top: 95%;
-            left: 1%;
-        }
-
-        .triangle_position {
-            top: 95%;
-            left: 1%;
-        }
-
-        .item {
-            position: absolute;
-            z-index: 2;
-            background-color: rgba(234, 234, 234, 0.393);
-            border-radius: 30px;
-            cursor: pointer;
-        }
-
-        .touppercase {
-            bottom: 23%;
-            left: 15%;
-        }
-
-        .circle {
-            bottom: 23%;
-            left: 40%;
-        }
-
-        .triangle {
-            bottom: 23%;
-            left: 65%;
-        }
-        
-    </style>
+    <link href='https://fonts.googleapis.com/css?family=Youngest Serif' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
 </head>
+<style>
+    body {
+        background: url("{{url_for('static', filename='worksbg.png')}}") no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .nav {
+        background: #ffffff71;
+        top: 8px;
+        position: fixed;
+        width: 100%;
+        text-align: right;
+    }
+
+    .nav a {
+        color: #808080;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+        margin: 15px;
+        margin-left: 40px;
+        display: inline-block;
+        position: relative;
+        transition: color 0.4s;
+    }
+
+    .nav a:hover {
+        color: #000000;
+    }
+
+    .content-container {
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+    }
+
+    h1 {
+        font-family: 'Youngest Serif';
+        text-align: center; 
+        font-size: 120px;
+        color: white;
+        text-shadow: 0 0 10px rgba(141, 139, 139, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+
+    h1 span {
+        font-family: 'Great Vibes';
+        font-size: 150px;
+        color: white;
+    }
+
+    .img {
+        width: 250px;
+    }
+
+    .img-hover {
+        display: none;
+        width: 250px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end; 
+        margin-top: 4%;
+    }
+
+    .button {
+        border: none;
+        cursor: pointer;
+        appearance: none;
+        background-color: inherit;
+        transition: transform .3s ease-in-out; 
+        position: relative;
+    }
+
+    .button:hover {
+        transform: scale(1.05);
+    }
+
+    .button:hover .img {
+        display: none;
+    }
+
+    .button:hover .img-hover {
+        display: block;
+    }
+
+    .description {
+        color: rgb(81, 74, 74);
+        font-family: 'Youngest Serif';
+        text-align: center;
+        margin-left: 160px;
+        margin-right: 160px;
+        margin-top: -100px;
+        font-size: 25px;
+    }
+
+</style>
 
 <body>
-    <div class="header">
-        <a href="/">Home</a> | 
-        <a href="/profile">Profile</a> | 
-        <a href="/contact">Contact</a> |
-        <a href="/works">Works</a> 
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/works">Works</a>
+        <a href="/contact">Contact</a>
+    </div>
+    
+    <div class="content-container">
+        <h1><span>P</span>rogramming <span>W</span>orks</h1>
+        <p class="description">Choose the laboratory you'd like to explore ♥</p>
     </div>
 
-    <h1>My programming works</h1>
+    <div class="button-container">
+        <a href="/touppercase">
+            <button type="touppercase" class="button" style="rotate: 356deg;">
+                <img src="static/1.png" alt="buttonpng" border="0" class="img" />
+                <img src="static/11.png" alt="buttonpng" border="0" class="img-hover" />
+            </button>
+        </a>
 
-    <div>
-    <a href="/touppercase" class="item touppercase">
-        <img src="static/workbg1.png" alt="Uppercase">
-        <h2 class="label uppercase_position">Convert String to Uppercase</h2>
-    </a>
-    </div>
+        <a href="/circle">
+            <button type="circle" class="button" style="rotate: 2deg;">
+                <img src="static/2.png" alt="buttonpng" border="0" class="img" />
+                <img src="static/22.png" alt="buttonpng" border="0" class="img-hover" />
+            </button>
+        </a>
+
+        <a href="/triangle">
+            <button type="triangle" class="button" style="rotate: 356deg;">
+                <img src="static/3.png" alt="buttonpng" border="0" class="img" />
+                <img src="static/33.png" alt="buttonpng" border="0" class="img-hover" />
+            </button>
+        </a>
+
+        <a href="/mergelist">
+            <button type="mergelist" class="button" style="rotate: 3deg;">
+                <img src="static/4.png" alt="buttonpng" border="0" class="img" />
+                <img src="static/44.png" alt="buttonpng" border="0" class="img-hover" />
+            </button>
+        </a>
 
     </div>
-    <a href="/circle" class="item circle">
-        <img src="static/workbg2.png" alt="Circle">
-        <h2 class="label circle_position"> Get the Area of a Circle</h2>
-    </a>
-    </div>
-
-    </div>
-    <a href="/triangle" class="item triangle">
-        <img src="static/workbg3.png" alt="Triangle">
-        <h2 class="label triangle_position"> Get the Area of a Triangle</h2>
-    </a>
-    </div>
-
-
 </body>
 </html>

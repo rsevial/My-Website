@@ -2,27 +2,26 @@
 <html lang="en">
 
 <head>
-    <title>Get the Area of the Triangle</title>
+    <title>Merged Linked List</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Young Serif' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Youngest Serif' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
 </head>
-
 <style>
     body {
-        background: url("{{url_for('static', filename='workbg.png')}}") no-repeat center center fixed;
-        background-size: cover;
-        margin: 0;
-    }
-
-    .nav {
+       background: url("{{url_for('static', filename='workbg.png')}}") no-repeat center center fixed;
+       background-size: cover;
+       margin: 0;
+   }
+   
+   .nav {
         background: #ffffff71;
         position: fixed;
         width: 100%;
         text-align: right;
         top: 10px;
-    }
+        }
 
     .nav a {
         color: #808080;
@@ -49,7 +48,7 @@
 
     h1 {
         font-family: 'Youngest Serif';
-        text-align: center; 
+        text-align: center;
         font-size: 90px;
         color: white;
         text-shadow: 0 0 10px rgba(141, 139, 139, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
@@ -62,20 +61,38 @@
     }
 
     .container {
-        width: 65%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 85%;
         margin: auto;
         background-color: #fffbed6b;
-        padding: 40px 50px 175px 50px;
-        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+        padding: 25px 50px 25px 30px;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
     }
 
     label {
         font-family: 'Franklin Gothic Medium', sans-serif;
-        font-size: 1.5vw;
-        color: #6daed5; 
+        font-size: 1.3vw;
+        color: #6daed5;
         text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
         display: block;
         margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .body input[type=number] {
+        font-size: 1.2vw;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 2px solid #f09ce1;
+        border-radius: 5px;
     }
 
     .body input[type=text] {
@@ -85,7 +102,6 @@
         box-sizing: border-box;
         border: 2px solid #f09ce1;
         border-radius: 5px;
-        margin-bottom: 10px;
     }
 
     .body input[type=submit] {
@@ -109,8 +125,8 @@
     .result {
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: 1.6vw;
-        width: 60%;
-        height: auto;
+        width: 39%;
+        height: 50%;
         display: block;
         position: absolute;
         margin: 20px auto;
@@ -121,8 +137,8 @@
         border: 1px solid #3c7db1;
         border-radius: 15px;
         text-shadow: -1px -1px 1px rgba(21, 7, 7, 0.1), 1px 1px 1px rgba(0, 0, 0, .5);
-        top: 83%;
-        left: 50%;
+        top: 65%;
+        left: 72%;
         transform: translate(-50%, -50%);
     }
 
@@ -135,10 +151,7 @@
         margin-top: -60px;
         font-size: 25px;
     }
-    
-
 </style>
-
 <body>
     <div class="nav">
         <a href="/">Home</a>
@@ -148,37 +161,52 @@
     </div>
 
     <div class="content-container">
-        <h1><span>G</span>et the <span>A</span>rea of a <span>T</span>riangle</h1>    
-        <p class="description">Enter the base and height of the triangle to calculate its area ♥</p>
+        <h1><span>M</span>erge <span>T</span>wo <span>L</span>inked <span>L</span>ists</h1>
+        <p class="description">Enter the size and values for two linked lists to see the merged result ♥</p>
     </div>
 
+    
     <div class="container">
-        <form action="/triangle" method="post">
-            <div class="position">
-                <label for="base">Enter the Base of the Triangle:</label>
+        <form method="post" action="/mergelist">
+            <div class="input-container">
+                <label for="size1">Enter the size of Linked List 1 (0 to 50):</label>
                 <div class="body input">
-                    <input type="text" id="base" name="base" placeholder="Base">
+                    <input type="number" id="size1" name="size1" placeholder="Enter size" min="0" max="50" required>
+                </div>
+
+                <label for="values1">Enter values for Linked List 1 (-100 to 100, separated by commas):</label>
+                <div class="body input">
+                    <input type="text" id="values1" name="values1" placeholder="Enter values" required>
                 </div>
             </div>
-            <div class="position">
-                <label for="height">Enter the Height of the Triangle:</label>
+
+            <div class="input-container">
+                <label for="size2">Enter the size of Linked List 2 (0 to 50):</label>
                 <div class="body input">
-                    <input type="text" id="height" name="height" placeholder="Height">
+                    <input type="number" id="size2" name="size2" placeholder="Enter size" min="0" max="50" required>
+                </div>
+
+                <label for="values2">Enter values for Linked List 2 (-100 to 100, separated by commas):</label>
+                <div class="body input">
+                    <input type="text" id="values2" name="values2" placeholder="Enter values" required>
                 </div>
             </div>
-            <div class="body input">
-                <input type="submit" value="Calculate Area">
+
+            <div class="body input" style="grid-column: span 2;">
+                <input type="submit" value="Merge Lists">
             </div>
         </form>
     </div>
-
     <div class="result">
-        {% if result %}
-        <p><span style="color: #faa1d6;">Area of the Triangle:</span> {{ result }}</p>
-        {% else %} 
-        <p>Enter the base and height of the Triangle to see the result.</p>
+        {% if result_values %}
+            <p><strong>Linked List 1:</strong><br>{{ print_linked_list(list1) }}</p>
+            <p><strong>Linked List 2:</strong><br>{{ print_linked_list(list2) }}</p>
+            <p><strong>Merged List:</strong><br>{{ print_linked_list(result_values) }}</p>
+        {% elif error %}
+            <p><strong>Error:</strong> {{ error }}</p>
+        {% else %}
+            <p><strong>Waiting for input...</strong></p>
         {% endif %}
     </div>
 </body>
-
 </html>
