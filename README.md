@@ -14,7 +14,6 @@ This repository contains Python and HTML files for my website. The website conta
 - Python script that defines a web application using the Flask framework
 
 > static
-
 - Special directory folder to store static files such as images that were used to create the website.
 
 > templates
@@ -23,28 +22,32 @@ This repository contains Python and HTML files for my website. The website conta
 ### HTML file
 
 #### index.html
-![image](https://github.com/rsevial/My-Website/assets/128889486/aa23488b-66e9-430a-8912-3e851a6bb2b4)
+![image](https://github.com/rsevial/My-Website/assets/128889486/1d39aaae-d6df-4ab7-84fe-d80f50463eb5)
 
 
 #### profile.html
-![image](https://github.com/rsevial/My-Website/assets/128889486/f7685ccc-9aee-4165-9a15-158bdb08fe61)
+![image](https://github.com/rsevial/My-Website/assets/128889486/73143469-abf4-4056-902b-203f3dcd3232)
 
 
 #### contact.html
-![image](https://github.com/rsevial/My-Website/assets/128889486/5fcb59e9-ddbd-4237-9f4d-6600601a8fbb)
+![image](https://github.com/rsevial/My-Website/assets/128889486/13e82cba-00e7-47f1-963d-327934629215)
 
 
 #### works.html
-![image](https://github.com/rsevial/My-Website/assets/128889486/1064b062-b877-4cfc-ad03-9ab746196cce)
+![image](https://github.com/rsevial/My-Website/assets/128889486/e16fee29-c9c5-43d6-ad47-7c9088f6efb2)
 
 
 #### touppercase.hmtl
-![image](https://github.com/rsevial/My-Website/assets/128889486/16cba3c6-3d7d-428a-8d95-7d450d1ef446)
+![image](https://github.com/rsevial/My-Website/assets/128889486/a4fde1de-4044-4b96-8124-e099b938f0f8)
 
 
 #### circle.html
-![image](https://github.com/rsevial/My-Website/assets/128889486/ba43dfea-7244-4cbd-8998-dbac1a79d114)
+![image](https://github.com/rsevial/My-Website/assets/128889486/0fef20cf-0ac3-4508-b3b3-0d4dd8bbc103)
 
 
 #### triangle.html
-![image](https://github.com/rsevial/My-Website/assets/128889486/b746d126-2ba4-4342-b37e-35278569cabf)
+![image](https://github.com/rsevial/My-Website/assets/128889486/98e0e915-53a3-46dd-8b0f-eb67ab97377f)
+
+#### mergelist.html
+![image](https://github.com/rsevial/My-Website/assets/128889486/adbee58e-11bd-403f-aa96-9bb70e7a6e1e)
+
