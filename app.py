@@ -12,6 +12,10 @@ def index():
 def profile():
     return render_template('profile.html')
 
+@app.route('/profilemore')
+def profilemore():
+    return render_template('profilemore.html')
+
 @app.route('/works', methods=['GET', 'POST'])
 def works():
     return render_template('works.html')

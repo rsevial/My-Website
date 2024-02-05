@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    body {
+        background: url("{{url_for('static', filename='profilemorebg.png')}}") no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .nav {
+        background: #ffffff71;
+        position: fixed;
+        width: 100%;
+        text-align: right;
+        top: 10px;
+    }
+
+    .nav a {
+        color: #808080;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+        margin: 15px;
+        margin-left: 40px;
+        display: inline-block;
+        position: relative;
+        transition: color 0.4s;
+    }
+
+    .nav a:hover {
+        color: #000000;
+    }
+
+    .content-container {
+        text-align: left;
+        margin-top: 150px;
+        margin-left: 45%;
+    }
+
+    p {
+        font-family: 'Lora', serif;
+        font-size: 27px;
+        color: white;
+        text-shadow: 0 0 10px rgba(141, 139, 139, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
+        position: relative;
+        margin-top: 5px;
+        line-height: 1.8; 
+    }
+
+    p span {
+        font-family: 'Merriweather', serif;
+        font-size: 30px;
+        color: #582a2a; 
+        display: block;
+        text-align: center;
+    }
+
+    .button-container {
+        position: fixed;
+        bottom: 15%;
+        right: 10%;
+    }
+
+    .button {
+        display: inline-block;
+        border-radius: 50px;
+        background-color: #F082AC;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 15px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00ab';
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        transition: 0.5s;
+    }
+
+    .button:hover {
+        background-color: #d25180;
+    }
+
+    .button:hover span {
+        padding-left: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        left: 0;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/works">Works</a>
+        <a href="/contact">Contact</a>
+    </div>
+    <div class="button-container">
+        <a href="/profile">
+            <button class="button" style="vertical-align:middle"><span>Back</span></button>
+        </a>
+    </div>
+    <div class="content-container">
+        <p>
+            Helloooo! You may call me Bekah, Bek, Joy, Ligaya, or anything we <br>
+            are both comfortable with. I'm 19 years old, born on April 6, 2004, <br>
+            and the youngest among my two siblings. I currently live in the shoe <br>
+            capital of the Philippines, Marikina City, but I originally lived in <br>
+            Lopez, Quezon Province. I believe that <span>"Everything happens for a reason, and you are <br>exactly where you need to be."</span>
+        </p>
+    </div>
+
+</body>
+
+</html>
